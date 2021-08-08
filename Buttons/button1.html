@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button 1</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #350048;
+        }
+        .buttons .button {
+            position: relative;
+            color: #fff;
+            padding: 14px 40px;
+            background: linear-gradient(90deg, #6616d0, #ac34e7);
+            border-radius: 50px;
+            margin: 0 15px;
+            font-size: 30px;
+            font-weight: 400;
+            text-decoration: none;
+            border: 0px solid;
+            cursor: pointer;
+            overflow: hidden;
+            box-shadow: 3px 5px rgba(0, 0, 0, 0.1);
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        .buttons .button.two {
+            background: linear-gradient(90deg, #025ce3, #4e94fd);
+        }
+        .buttons .button .overlay {
+            position: absolute;
+            height: 400px;
+            width: 400px;
+            background: #fff;
+            top: 0;
+            border-radius: 50%;
+            left: 0;
+            transform: translate(-50%, -50%);
+            opacity: 0.5;
+            animation: blink 1s linear infinite;
+        }
+        @keyframes blink {
+            0%{
+                height: 0px;
+                width: 0px;
+                opacity: 0.5;
+            }
+            100% {
+                height: 400px;
+                width: 400px;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons">
+        <button class="button">
+            Button
+        </button>
+        <button class="button two">
+            Button
+        </button>
+    </div>
+    <script>
+        let buttons = document.querySelectorAll('.button');
+        buttons.forEach(item => {
+            item.addEventListener("click", (e) => {
+                e.preventDefault();
+                let overlay = document.createElement('span');
+                overlay.classList.add("overlay");
+                let x = e.clientX - e.target.offsetLeft;
+                let y = e.clientY - e.target.offsetTop;
+                overlay.style.left = x + "px";
+                overlay.style.top = y + "px";
+                e.target.appendChild(overlay);
+                setTimeout(() => {
+                    overlay.remove();
+                }, 700);
+            })
+        })
+    </script>
+</body>
+</html>
