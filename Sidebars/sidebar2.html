@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        body {
+            background: #e9f8f5;
+        }
+        .sidebar {
+            position: relative;
+            top: 0;
+            left: -100%;
+            width: 300px;
+            height: 100vh;
+            background: #f1f9ff;
+            padding: 12px;
+            box-shadow: -3px -3px 7px rgb(219, 223, 255), 
+                        3px 3px 5px #c2c2cc, 
+                        inset -3px -3px 7px rgb(239, 237, 246), 
+                        inset 3px 3px 5px #c1c1c5;
+            transition: all 0.5s ease;
+        }
+        .sidebar .title {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .sidebar .title .logo {
+            font-size: 27px;
+            font-weight: 600;
+            color: #2b3585;
+        }
+        .sidebar ul {
+            margin-top: 35px;
+            list-style: none;
+        }
+        .sidebar ul a {
+            color: #2b3585;
+            text-decoration: none;
+            display: block;
+            margin-top: 12px;
+            font-size: 18px;
+            font-weight: 400;
+            padding: 10px 25px;
+            border-radius: 6px;
+            box-shadow: -3px -3px 7px #ebebeb, 3px 3px 5px #b8b8ee;
+            position: relative;
+        }
+        .sidebar ul i {
+            margin-right: 10px;
+        }
+        .media-icons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+        }
+        .media-icons a {
+            margin: 0 4px;
+            font-size: 17px;
+            cursor: pointer;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            text-decoration: none;
+            box-shadow: -3px -3px 7px #ebebeb, 3px 3px 5px #b8b8ee;
+            position: relative;
+        }
+        .sidebar ul a:hover:before, 
+        .media-icons a:hover:before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            box-shadow: inset -3px -3px 7px #dfdfe4, inset 3px 3px 5px #dddde4;
+        }
+        .sidebar ul a:hover:before {
+            color: #3498db;
+            border-radius: 6px;
+        }
+        .sidebar ul a:hover {
+            color: #3498db;
+        }
+        .media-icons a:hover:before {
+            border-radius: 50%;
+        }
+        .media-icons a:nth-child(1) {
+            color: #4267b2;
+        }
+        .media-icons a:nth-child(2) {
+            color: #1da1f2;
+        }
+        .media-icons a:nth-child(3) {
+            color: #e1306c;
+        }
+        .media-icons a:nth-child(4) {
+            color: #0a66c2;
+        }
+        label {
+            font-size: 17px;
+            color: #2b3585;
+            box-shadow: -3px -3px 7px #ebebeb, 3px 3px 5px #b8b8ee;
+            height: 37px;
+            width: 37px;
+            border-radius: 50%;
+            line-height: 37px;
+            cursor: pointer;
+            text-align: center;
+            transition: 0.3s ease;
+        }
+        .bars {
+            position: absolute;
+            left: 15px;
+            top: 15px;
+        }
+        label:hover {
+            box-shadow: inset -3px -3px 7px #dfdfe4, inset 3px 3px 5px #dddde4;
+            color: #3498db;
+        }
+        #check {
+            display: none;
+        }
+        #check:checked ~ .sidebar {
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="check">
+    <label class="button bars" for="check"><i class="fas fa-bars"></i></label>
+    <div class="sidebar">
+        <div class="title">
+            <div class="logo">CodingLab</div>
+            <label class="button cancel" for="check"><i class="fas fa-times"></i></label>
+        </div>
+        <ul>
+            <li><a href="#"><i class="fas fa-qrcode"></i>Dashboard</a></li>
+            <li><a href="#"><i class="fas fa-link"></i>Shortcuts</a></li>
+            <li><a href="#"><i class="fas fa-stream"></i>Overview</a></li>
+            <li><a href="#"><i class="fas fa-calendar-week"></i>Events</a></li>
+            <li><a href="#"><i class="fas fa-question-circle"></i>About</a></li>
+            <li><a href="#"><i class="fas fa-sliders-h"></i>Services</a></li>
+            <li><a href="#"><i class="fas fa-phone-volume"></i>Contact</a></li>
+            <li><a href="#"><i class="fas fa-comments"></i>Feedback</a></li>
+        </ul>
+        <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+</body>
+</html>
