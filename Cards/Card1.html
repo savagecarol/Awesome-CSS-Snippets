@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Post Card</title>
+</head>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+    body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .card {
+        height: 70vh;
+        width: 300px;
+        background: rgb(202, 235, 236);
+        position: relative;
+        border-radius: 10px;
+    }
+    .card__header {
+        height: 10%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .card__headerLeft {
+        height: 100%;
+        width: 90%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+    }
+    .card__headerLeft img {
+        height: 70%;
+        border-radius: 50%;
+    }
+    .card__headerLeft p {
+        padding-left: 10px;
+        border-radius: 50%;
+    }
+    .card__headerRight {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 10%;
+        cursor: pointer;
+    }
+    .card__body {
+        height: 80%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card__body img {
+        height: 100%;
+        width: 100%;
+    }
+    .card__footer {
+        height: 10%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .card__footer span {
+        cursor: pointer;
+        font-size: 2rem;
+    }
+    .card__footerLeft {
+        height: 100%;
+        width: 45%;
+        padding-left: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .card__footerLeft span.comment {
+        transform: rotateY(-180deg);
+    }
+    .card__footerRight {
+        height: 100%;
+        width: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card__footerRight span {
+        font-size: 2.4rem;
+    }
+</style>
+<body>
+    <div class="card">
+        <div class="card__header">
+            <div class="card__headerLeft">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="">
+                <p>darkstar</p>
+            </div>
+            <div class="card__headerRight">
+                <span class="material-icons">more_vert</span>
+            </div>
+        </div>
+        <div class="card__body">
+            <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8ZWR1Y2F0aW9ufHx8fHx8MTYyOTQ5NjU4OQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600" alt="">
+        </div>
+        <div class="card__footer">
+            <div class="card__footerLeft">
+                <span class="material-icons">favorite_border</span>
+                <span class="material-icons comment">chat_bubble_outline</span>
+                <span class="material-icons">share</span>
+            </div>
+            <div class="card__footerRight">
+                <span class="material-icons">bookmark_border</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
