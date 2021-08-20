@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar 1 (Not Responsive)</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 60px;
+        width: 100%;
+        background-color: rgb(209, 231, 245);
+    }
+    nav a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-weight: 700;
+        transition: 0.3s;
+    }
+    nav a:hover {
+        color: rgb(25, 38, 219);
+        font-weight: 900;
+        letter-spacing: 2px;
+        text-shadow: 1px -1px 25px rgb(25, 38, 219);
+    }
+    .nav__left {
+        display: flex;
+        width: 60%;
+        padding-left: 20px;
+    }
+    .nav__left ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .nav__left ul a {
+        padding-left: 25px;
+    }
+    .nav__left .nav__brand a {
+        padding-left: 0;
+        font-weight: 900;
+    }
+    .nav__left .nav__brand a:hover {
+        padding-left: 0;
+        font-weight: 900;
+        color: rgb(117, 16, 199);
+        text-shadow: 1px -1px 25px rgb(117, 16, 199);
+    }
+    .nav__left ul a:nth-child(2) {
+        padding-left: 30px;
+    }
+    .nav__right {
+        width: 40%;
+    }
+    .nav__right ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .nav__right ul a li {
+        padding-right: 25px;
+    }
+</style>
+<body>
+    <nav>
+        <div class="nav__left">
+            <div class="nav__brand">
+                <a href="#">Heading</a>
+            </div>
+            <ul>
+                <a href="#"><li>Home</li></a>
+                <a href="#"><li>About</li></a>
+                <a href="#"><li>Services</li></a>
+                <a href="#"><li>Contact</li></a>
+            </ul>
+        </div>
+        <div class="nav__right">
+            <ul>
+                <a href="#"><li>Login</li></a>
+                <a href="#"><li>Register</li></a>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>
